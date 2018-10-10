@@ -10,6 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "webpack": "^4.20.2"
   }
+},
+
+"scripts": {
+  "dev": "webpack -d --watch",
+  "start": "node ./server/index.js",
+  "build": "webpack -p",
+  "react-dev": "webpack -d --watch",
+  "server-dev": "nodemon server/index.js"
 }
