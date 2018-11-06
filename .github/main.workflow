@@ -12,13 +12,13 @@ action "login" {
 action "push" {
   uses = "actions/heroku@master"
   needs = "login"
-  args = "container:push -a calm-fortress-1234 web"
+  args = "container:push -a georgiarust web"
   secrets = ["HEROKU_API_KEY"]
 }
 
 action "release" {
   uses = "actions/heroku@master"
   needs = "push"
-  args = "container:release -a calm-fortress-1234 web"
+  args = "container:release -a georgiarust web"
   secrets = ["HEROKU_API_KEY"]
 }
