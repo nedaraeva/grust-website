@@ -23,7 +23,7 @@ action "release" {
   secrets = ["HEROKU_API_KEY"]
 }
 
-workflow "Publish to SNS topic on push" {
+action "Publish to SNS topic on push" {
   on = "release"
   resolves = ["Publish"]
 }
