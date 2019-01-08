@@ -23,11 +23,6 @@ action "release" {
   secrets = ["HEROKU_API_KEY"]
 }
 
-action "Publish to SNS topic on push" {
-  on = "release"
-  resolves = ["Publish"]
-}
-
 action "EmailMessage" {
   uses = "./.github/actions/generate-email-message"
 }
